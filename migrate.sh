@@ -10,6 +10,7 @@ if [[ $choice == "y" ]]; then
     wget https://github.com/parchlinux/ppr/raw/main/x86_64/parch-pacman-24-1-any.pkg.tar.zst
     pacman -U parch-pacman-24-1-any.pkg.tar.zst
     pacman -Syy
+    pacman -S parch-emoji-ios parch-wallpapers
     echo "Done, please reboot your system."
 else
     echo "Exiting..."
