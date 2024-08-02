@@ -8,7 +8,7 @@ if [[ $choice == "y" ]]; then
     wget https://raw.githubusercontent.com/parchlinux/ppr/main/x86_64/parch-branding-2024.07.17-0-any.pkg.tar.zst
     pacman -U parch-branding-2024.07.17-0-any.pkg.tar.zst --noconfirm
     wget https://raw.githubusercontent.com/parchlinux/ppr/main/x86_64/parch-pacman-27-0-any.pkg.tar.zst
-    pacman -U parch-pacman-27.0-any.pkg.tar.zst --noconfirm
+    pacman -U parch-pacman-27-0-any.pkg.tar.zst --noconfirm
     pacman -Syy
     pacman -Rdd neofetch --noconfirm
     pacman -S parch-emoji-ios archlinux-keyring neofetch-git fastfetch parch-wallpapers --noconfirm
