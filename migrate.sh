@@ -11,7 +11,8 @@ if [[ $choice == "y" ]]; then
     pacman -U parch-pacman-27-0-any.pkg.tar.zst --noconfirm
     pacman -Syy
     pacman -Rdd neofetch --noconfirm
-    pacman -S parch-emoji-ios archlinux-keyring neofetch-git fastfetch parch-wallpapers --noconfirm
+    pacman -S parch-emoji-ios archlinux-keyring neofetch-git fastfetch parch-wallpapers parch-sddm-theme linux-firmware-marvell open-iscsi rxvt-unicode-terminfo gst-plugin-pipewire mpv virtualbox-guest-utils-nox hack-nerd-fonts terminus-font ntfs-3g plymouth efibootmgr python-systemd gnome-terminal bluez xorg-xinit udftools amd-ucode refind kitty-terminfo estedad-fonts alsa-utils linux  parch-grub bluez-utils man-pages boost parch-plymouth bind android-file-transfer dmidecode open-vm-tools parch-base broadcom-wl-dkms wireless_tools pv openssl-1.1 os-prober hyperv blueberry xorg-twm sof-firmware linux-headers gnome-calculator lynx --noconfirm
+
     echo "Done, please reboot your system."
 else
     echo "Exiting..."
