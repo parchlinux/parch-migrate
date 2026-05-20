@@ -5,13 +5,15 @@ read -p "This script would turn your current Arch Based distro to Parch Linux an
 if [[ $choice == "y" ]]; then
     echo "Starting the migration...."
     cd /tmp
-    wget https://raw.githubusercontent.com/parchlinux/ppr/main/x86_64/parch-branding-2024.07.17-0-any.pkg.tar.zst
+    wget https://mirror.parchlinux.ir/world/x86_64/parch-branding-2024.07.17-0-any.pkg.tar.zst
     pacman -U parch-branding-2024.07.17-0-any.pkg.tar.zst --noconfirm
-    wget https://raw.githubusercontent.com/parchlinux/ppr/main/x86_64/parch-pacman-27-0-any.pkg.tar.zst
-    pacman -U parch-pacman-27-0-any.pkg.tar.zst --noconfirm
+    wget https://mirror.parchlinux.ir/world/x86_64/parch-pacman-33-0-any.pkg.tar.zst
+    pacman -U parch-pacman-33-0-any.pkg.tar.zst --noconfirm
+    wget https://mirror.parchlinux.ir/world/x86_64/parch-pacman-next-33-0-any.pkg.tar.zst
+    pacman -U parch-pacman-next-33-0-any.pkg.tar.zst --noconfirm
     pacman -Syy
     pacman -Rdd neofetch --noconfirm
-    pacman -S parch-emoji-ios archlinux-keyring neofetch-git fastfetch parch-wallpapers --noconfirm
+    pacman -S parch-base archlinux-keyring parchlinux-keyring neofetch-git fastfetch parch-wallpapers --noconfirm
     echo "Done, please reboot your system."
 else
     echo "Exiting..."
